@@ -12,6 +12,14 @@ def fix_linkedin_text(text):
 
     return fixed_text
 
+# Before saving to your DB or sending to LinkedIn API
+def save_profile(profile_data):
+    # Automatically fix the summary field without user intervention and fix is useful for Metadata approach like JSON or DB storage
+    profile_data['summary'] = fix_linkedin_spacing(profile_data['summary'])
+    db.save(profile_data)
+
+
+
 if __name__ == "__main__":
     linkedin_about_me = """software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.
 
