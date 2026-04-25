@@ -32,4 +32,3 @@ This script automates the process of "injecting" invisible Unicode characters in
 
 ## 💡 Why this character?
 * **\u2800 (Braille Pattern Blank):** Unlike a standard space, most platforms (including LinkedIn) treat this as a "content" character, making it the most reliable for forcing line breaks without adding visible symbols.
-* 
